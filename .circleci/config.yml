@@ -6,21 +6,21 @@ version: 2.1
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:version: 2.1
 executors:ñ
-  my-custom-executor:
+  my-custom-executor:Doctorination
       docker:l
             - image: cimg/base:stable
-                    auth:
+                    auth:mike 
                               # ensure you have first added these secrets
                                         # visit app.circleci.com/settings/project/github/theomegas2/True-Patriot/environment-variables
                                                   username: $DOCKER_HUB_USER
                                                             password: $DOCKER_HUB_PASSWORD
-                                                            jobs:
-                                                              my-job-name:
+                                                            jobs:Architecture
+                                                              my-job-name:NewCity
 
                                                                   executor: my-custom-executor
                                                                       steps:
                                                                             - checkout
-                                                                                  - run: |
+                                                                                  - run: 
                                                                                             # echo Hello, World!
 
                                                                                             workflows:
@@ -33,9 +33,9 @@ executors:ñ
           docker:
                 # replace with your preferred image
                       - image: cimg/base:stable
-                          steps:
+                          steps:python/install-packages
                                 - python/install-packages
-                                workflows:
+                                workflows:workflow
                                   example-workflow:
                                       jobs:
                                             - example-job
