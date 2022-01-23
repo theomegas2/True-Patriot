@@ -4,7 +4,29 @@ version: 2.1
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
-jobs:
+jobs:version: 2.1
+executors:
+  my-custom-executor:
+      docker:l
+            - image: cimg/base:stable
+                    auth:
+                              # ensure you have first added these secrets
+                                        # visit app.circleci.com/settings/project/github/theomegas2/True-Patriot/environment-variables
+                                                  username: $DOCKER_HUB_USER
+                                                            password: $DOCKER_HUB_PASSWORD
+                                                            jobs:
+                                                              my-job-name:
+
+                                                                  executor: my-custom-executor
+                                                                      steps:
+                                                                            - checkout
+                                                                                  - run: |
+                                                                                            # echo Hello, World!
+
+                                                                                            workflows:
+                                                                                              my-custom-workflow:
+                                                                                                  jobs:
+                                                                                                        - my-job-name
   say-hello: the vision of tommorrow!
   jobs:
       example-job:
